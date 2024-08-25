@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="/Lab/css/configuracion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Configuración Avanzada</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/index.html" aria-label="Ir a la página principal"><img src="/Lab/img/logo.png" alt="Logo de LabOrganic" class="logo-img"></a>
+            <h1 class="nombre-compañia">LabOrganic</h1>
+        </div>
+        <nav class="navbar" role="navigation">
+            <div class="dropdown">
+                <button class="dropbtn" aria-expanded="false"><i class="fa-solid fa-user"></i></button>
+                <div class="dropdown-content" role="menu">
+                    <a href="#" class="nav-link" aria-label="Perfil"><i class="fas fa-user-circle"></i> Perfil</a>
+                    <a href="/configuracion.html" class="nav-link" aria-label="Configuración"><i class="fas fa-cog"></i> Configuración</a>
+                    <a href="/index.html" class="nav-link" aria-label="Cerrar-Sesión"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Configuración Avanzada</h1>
+                <form id="configForm">
+            <div class="section">
+                <h2>Apariencia</h2>
+                <label for="colorFondo">Color de fondo:</label>
+                <input type="color" id="colorFondo" name="colorFondo" value="#f4f7f6">
+                
+                <label for="colorTexto">Color de texto:</label>
+                <input type="color" id="colorTexto" name="colorTexto" value="#333333">
+                
+                <label for="tamanoFuente">Tamaño de fuente:</label>
+                <input type="range" id="tamanoFuente" name="tamanoFuente" min="12" max="24" value="16">
+                <span id="tamanoFuenteValor">16px</span>
+                
+                <label for="modoOscuro">Modo oscuro:</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="modoOscuro" name="modoOscuro">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+            <div class="section">
+                <h2>Idioma y región</h2>
+                <label for="idioma">Idioma:</label>
+                <select id="idioma" name="idioma">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+                
+                <label for="formatoFecha">Formato de fecha:</label>
+                <select id="formatoFecha" name="formatoFecha">
+                    <option value="dd/mm/yyyy">DD/MM/YYYY</option>
+                    <option value="mm/dd/yyyy">MM/DD/YYYY</option>
+                    <option value="yyyy-mm-dd">YYYY-MM-DD</option>
+                </select>
+            </div>
+            
+            <div class="section">
+                <h2>Notificaciones</h2>
+                <label for="notificacionesEmail">Notificaciones por email:</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="notificacionesEmail" name="notificacionesEmail" checked>
+                    <span class="slider"></span>
+                </label>
+                
+                <label for="notificacionesPush">Notificaciones push:</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="notificacionesPush" name="notificacionesPush" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+            <div class="section">
+                <h2>Privacidad</h2>
+                <label for="perfilPublico">Perfil público:</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="perfilPublico" name="perfilPublico">
+                    <span class="slider"></span>
+                </label>
+                
+                <label for="compartirDatos">Compartir datos de uso:</label>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="compartirDatos" name="compartirDatos">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+            <button type="submit">Guardar cambios</button>
+        </form>
+    </div>
+        
+    <main>
+        <aside class="sidebar">
+            <ul class="side">
+                <li><a href="/index.html"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="/cursos.html"><i class="fas fa-chalkboard-teacher"></i> Cursos</a></li>
+                <li><a href="#"><i class="fas fa-calendar-alt"></i> Calendario</a></li>
+                <li><a href="#"><i class="fas fa-user-circle"></i> Área Personal</a></li>
+                <li><a href="/Quiénes somos.html"><i class="fa-solid fa-question"></i> Quienes somos</a></li>
+                <li><a href="#"><i class="fas fa-headset"></i> Atención Al Cliente</a></li>
+            </ul>
+        </aside>
+    </main>
+    <script src="/Lab/js/configuracion.js"></script>
+</body>
+</html>

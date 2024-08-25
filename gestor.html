@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabOrganic</title>
+    <link rel="stylesheet" href="/Lab/css/gestor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Selecciona teoría o problemas de química, elige temas y descarga recursos educativos.">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/index.html" aria-label="Ir a la página principal"><img src="/Lab/img/logo.png" alt="Logo de LabOrganic" class="logo-img"></a>
+            <h1 class="nombre-compañia">LabOrganic</h1>
+        </div>
+        <nav class="navbar" role="navigation">
+            <div class="dropdown">
+                <button class="dropbtn" aria-expanded="false"><i class="fa-solid fa-user"></i></button>
+                <div class="dropdown-content" role="menu">
+                    <a href="#" class="nav-link" aria-label="Perfil"><i class="fas fa-user-circle"></i> Perfil</a>
+                    <a href="/configuracion.html" class="nav-link" aria-label="Configuración"><i class="fas fa-cog"></i> Configuración</a>
+                    <a href="/login.html" class="nav-link" aria-label="Cerrar-Sesión"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <ul class="side">
+                <li><a href="/principal.html"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="/videos.html"><i class="fas fa-video"></i> Videos</a></li>
+                <li><a href="/quizzes.html"><i class="fas fa-question-circle"></i> Quizzes</a></li>
+                <li><a href="/gestor.html"><i class="fas fa-file-alt"></i>Archivos</a></li>
+                <li><a href="/teoria.html"><i class="fas fa-book"></i> Teoría</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="container-form">
+                <h1>Elige tus Opciones</h1>
+                <form id="optionsForm">
+                    <div class="form-group">
+                        <label for="category">Elige una opción:</label>
+                        <select id="category" name="category" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="Teoria">Teoría</option>
+                            <option value="problemas">Problemas</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tema">Elige un tema de Química:</label>
+                        <select id="tema" name="tema" required>
+                            <option value="">Selecciona un tema</option>
+                            <option value="atom_structure">Estructura Atómica</option>
+                            <option value="periodic_table">Tabla Periódica</option>
+                            <option value="chemical_bonds">Enlaces Químicos</option>
+                            <option value="thermodynamics">Termodinámica</option>
+                            <option value="acid_base">Ácidos y Bases</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="difficultyGroup" style="display:none;">
+                        <label for="difficulty">Elige la dificultad:</label>
+                        <select id="difficulty" name="difficulty">
+                            <option value="">Selecciona una dificultad</option>
+                            <option value="easy">Fácil</option>
+                            <option value="medium">Media</option>
+                            <option value="hard">Difícil</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit">Aceptar</button>
+                    </div>
+                </form>
+
+                <div class="Seccion-Descarga" id="SeccionDescarga" style="display:none;">
+                    <h2>Archivos Disponibles para Descarga</h2>
+                    <ul id="ListaDescarga"></ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/Lab/js/gestor.js"></script>
+</body>
+</html>
+
