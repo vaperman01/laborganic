@@ -1,0 +1,254 @@
+/* Base styles */
+:root {
+    --button-bg: #25207a;
+    --button-hover: #134B70;
+}
+
+body {
+    background-color: #f4f7f6;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: linear-gradient(135deg, #3e2a7f, #1e1b53);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #f5f5f5;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nombre-compañia {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Navbar styles */
+.navbar {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: var(--button-bg);
+    color: #f5f5f5;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropbtn:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #9a99ac;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #f5f5f5;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--button-hover);
+    color: #fff;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    left: -200px;
+    width: 200px;
+    background-color: #201E43;
+    margin-top: 95px;
+    height: 100vh;
+    overflow: hidden;
+    transition: left 0.3s ease;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 1000;
+}
+
+.sidebar:hover {
+    left: 0;
+}
+
+.side {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side li {
+    margin: 15px 0;
+}
+
+.side a {
+    text-decoration: none;
+    color: #f5f5fb;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
+}
+
+.side i {
+    margin-right: 10px;
+    font-size: 1.25rem;
+}
+
+.side a:hover {
+    background-color: var(--button-hover);
+    color: #fff;
+}
+
+/* Main content styles */
+main {
+    transition: margin-left 0.3s ease;
+    padding: 20px;
+}
+
+.content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.resource-btn, .quiz-btn {
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.resource-btn:hover, .quiz-btn:hover {
+    background-color: var(--button-hover);
+}
+
+.quiz-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quiz-item {
+    background-color: white;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .dropbtn {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        left: -100%;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .content {
+        padding: 15px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    main {
+        margin-left: 240px;
+    }
+
+    .sidebar:hover ~ main {
+        margin-left: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .nombre-compañia {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .resource-btn, .quiz-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}

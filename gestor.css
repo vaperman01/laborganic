@@ -1,0 +1,336 @@
+/* Estilos globales para el body */
+body {
+  background: #D1D8C5;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: linear-gradient(135deg, #3e2a7f, #1e1b53);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #f5f5f5;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.nombre-compañia {
+  font-size: 24px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.navbar {
+  position: relative;
+}
+
+.dropbtn {
+  background-color: #25207a;
+  color: #f5f5f5;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropbtn:hover {
+  background-color: #134B70;
+  transform: scale(1.05);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #9a99ac;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #f5f5f5;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #134B70;
+  color: #fff;
+}
+
+/* Estilo del menú lateral */
+.sidebar {
+  position: fixed;
+  left: -200px;
+  width: 200px;
+  background-color: #201E43;
+  top: 80px;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 999;
+}
+
+.sidebar-trigger {
+  position: fixed;
+  left: 0;
+  top: 100px;
+  z-index: 1000;
+}
+
+.sidebar-trigger a {
+  text-decoration: none;
+  color: #f5f5fb;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  background-color: #201E43;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+.sidebar-trigger a:hover {
+  background-color: #134B70;
+}
+
+.sidebar:hover {
+  left: 0;
+}
+
+.side {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side li {
+  margin: 15px 0;
+}
+
+.side a {
+  text-decoration: none;
+  color: #f5f5fb;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 16px;
+}
+
+.side i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.side a:hover {
+  background-color: #134B70;
+  color: #fff;
+}
+
+/* Contenedor principal con espacio para la barra lateral y el contenido */
+.container {
+  display: flex;
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+/* Estilo para el contenedor del formulario */
+.container-form {
+  background: #201E43;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 5px solid #134B70;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Estilo para el título del formulario */
+.container-form h1 {
+  color: #f5f5fb;
+  margin-bottom: 20px;
+}
+
+/* Estilo para los grupos de formulario */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Estilo para las etiquetas de los campos */
+.form-group label {
+  color: #f5f5fb;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+/* Estilo para los campos de selección */
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #5F6F65;
+  color: #508C9B;
+  background-color: #EEEEEE;
+  font-size: 16px;
+  border-radius: 7px;
+}
+
+/* Estilo para el botón */
+button {
+  background: #25207a;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 10px;
+}
+
+/* Estilo para el botón en hover */
+button:hover {
+  background: #148072;
+}
+
+/* Estilo para la sección de descarga */
+.Seccion-Descarga {
+  margin-top: 20px;
+}
+
+.Seccion-Descarga h2 {
+  color: #f5f5fb;
+}
+
+#ListaDescarga {
+  list-style: none;
+  padding: 0;
+}
+
+#ListaDescarga li {
+  color: #f5f5fb;
+  margin: 5px 0;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px 5%;
+  }
+
+  .logo {
+      margin-bottom: 10px;
+  }
+
+  .navbar {
+      width: 100%;
+  }
+
+  .dropbtn {
+      width: 100%;
+      text-align: left;
+  }
+
+  .dropdown-content {
+      width: 100%;
+      position: static;
+  }
+
+  .sidebar {
+      width: 100%;
+      left: -100%;
+      top: 140px;
+      height: calc(100vh - 140px);
+  }
+
+  .sidebar-trigger {
+      top: 140px;
+  }
+
+  .container {
+      flex-direction: column;
+      margin-top: 140px;
+  }
+
+  .main-content {
+      padding: 10px;
+  }
+
+  .container-form {
+      padding: 15px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+      width: 150px;
+      left: -150px;
+  }
+
+  .main-content {
+      margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .sidebar {
+      left: 0;
+  }
+
+  .main-content {
+      margin-left: 200px;
+  }
+
+  .container-form {
+      max-width: 800px;
+  }
+}

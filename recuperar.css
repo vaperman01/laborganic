@@ -1,0 +1,73 @@
+body {
+    background: #D1D8C5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.login-container {
+    background:#201E43;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 5px solid #134B70;
+    width: 300px;
+    text-align: center;
+}
+
+.login-container h1 {
+    color: #f5f5fb;
+    margin-bottom: 40px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 4px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #5F6F65;
+    color: #508C9B;
+    background-color: #EEEEEE;
+    font-size: 16px;
+    border-radius: 7px;
+}
+
+.input-group label {
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    color: #3e2e8e;
+    transition: 0.5s;
+}
+
+.input-group input:focus + label, .input-group input:valid + label {
+    top: -20px;
+    left: 0;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+button {
+    background: #25207a;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 10px;
+}
+
+button:hover {
+    background: #148072;
+}

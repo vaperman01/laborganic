@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+}
+
+p{
+    color: #a4a8ac;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+}
+.container {
+  margin-left: 200px;
+  flex: 8;
+  padding: 20px 40px 20px 24px;
+}
+
+.container .main {
+  display: flex;
+}
+
+.container .main .content {
+  flex: 9;
+}
+
+.container .main .content .header {
+  margin-top: 20px;
+}
+
+.container .main .content .header h4 span {
+  font-size: 13px;
+  color: #a4a8ac;
+  font-weight: 500;
+}
+
+.container .main .content .header p {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.container .main .content .job-cards {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.container .main .content .job-cards .card {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  border: 2px solid #F2F2F2;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.container .main .content .job-cards .card:hover {
+  box-shadow: none;
+}
+
+.container .main .content .job-cards .card .card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .main .content .job-cards .card .card-header>i {
+  font-size: 24px;
+  color: #a4a8ac;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container .main .content .job-cards .card .card-header>i:hover {
+  color: #111;
+}
+
+.container .main .content .job-cards .card .card-header .job-info {
+  display: flex;
+  gap: 10px;
+}
+
+.container .main .content .job-cards .card .card-header .job-info i {
+  font-size: 34px;
+  background: #F2F2F2;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .main .content .job-cards .card .card-header .job-info h5 {
+  font-weight: 500;
+}
+
+.container .main .content .job-cards .card .card-header .job-info h5 span {
+  font-size: 12px;
+  color: #a4a8ac;
+}
+
+.container .main .content .job-cards .card .card-header .job-info a {
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.container .main .content .job-cards .card .card-header .job-info p {
+  font-size: 12px;
+}
+
+.container .main .content .job-cards .card .card-tags {
+  margin: 12px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.container .main .content .job-cards .card .card-tags a {
+  font-size: 13px;
+  background: #F2F2F2;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.container .main .content .job-cards .card .card-desc {
+  font-size: 13px;
+  color: #a4a8ac;
+  line-height: 18px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: calc(18px * 3);
+}

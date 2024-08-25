@@ -1,0 +1,173 @@
+body {
+  background-color: #f4f7f6;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 35px;
+  background: linear-gradient(135deg, #3e2a7f, #1e1b53);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #f5f5f5;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+}
+
+.nombre-compañia {
+  font-size: 28px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.navbar {
+  position: relative;
+}
+
+.dropbtn {
+  background-color: #25207a;
+  color: #f5f5f5;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropbtn:hover {
+  background-color: #134B70;
+  transform: scale(1.05);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #9a99ac;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #f5f5f5;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #134B70;
+  color: #fff;
+}
+
+/* Estilo para los elementos del menú lateral */
+.sidebar {
+  position: fixed;
+  left: -200px;
+  /* Inicialmente oculta */
+  width: 200px;
+  background-color: #201E43;
+  margin-top: 95px;
+  height: 100vh;
+  overflow: hidden;
+  transition: left 0.3s ease;
+  /* Transición para mostrar/ocultar */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.sidebar:hover {
+  left: 0;
+  /* Muestra al pasar el mouse sobre el ícono */
+}
+
+.side {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side li {
+  margin: 15px 0;
+}
+
+.side a {
+  text-decoration: none;
+  color: #f5f5fb;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 16px;
+}
+
+.side i {
+  margin-right: 10px;
+  /* Espacio entre el ícono y el texto */
+  font-size: 20px;
+  /* Tamaño del ícono */
+}
+
+.side a:hover {
+  background-color: #134B70;
+  color: #fff;
+}
+
+.content {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+  flex-grow: 1;
+  padding: 2rem;
+  margin-top: 120px;
+}
+
+.content:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content */
+main {
+  margin-left: 240px;
+  /* Espacio para la barra lateral */
+  padding: 20px;
+  text-align: justify;
+}
+
+/* Pie de página */
+footer {
+  margin-left: 220px;
+  /* Para alinear con el contenido principal */
+  padding: 20px;
+  text-align: center;
+  background-color: #25207a;
+  color: #ffffff;
+  border-top: 5px solid #134B70;
+}
